@@ -1,4 +1,4 @@
-# TypeScript
+# [TypeScript](https://www.typescriptlang.org/ko/)
 
 - 자바스크립트의 확장판
 

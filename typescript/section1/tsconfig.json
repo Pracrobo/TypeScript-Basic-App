@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "target": "ESNext",
+    "module" : "ESNext", //"commonjs"
+    "outDir" : "dist", // 코드폴더 분리
+    "strict" : false, // 엄격한 타입 검사 : 매개변수 타입 추론 불가
+    "moduleDetection": "force",
+  },
+  "include": ["src"]
+}
