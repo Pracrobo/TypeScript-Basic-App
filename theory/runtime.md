@@ -57,3 +57,21 @@ ts-node src/index.ts
 npm install -g tsx
 tsx src/index.ts
 ```
+
+5. ts-node 는 기본적으로 common.js이다.
+   `package.json`
+
+```json
+"type" : "module"
+```
+
+`tsconfig.json`
+
+```ts
+"ts-node" : {
+  "esm" : true,
+}
+```
+
+- ts-node가 esmodule 시스템으로 동작하게 된다.
+-
