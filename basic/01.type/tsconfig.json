@@ -3,8 +3,10 @@
     "target": "ESNext",
     "module": "ESNext",
     "outDir": "dist",
-    "strict": true,
-    "moduleDetection": "force"
+    "strict": true, // 상위옵션, strict - strictNullChecks
+    //"strictNullChecks": false, // 기본적으로 true
+    "moduleDetection": "force",
+    "skipLibCheck": true
   },
   "ts-node": {
     "esm": true
