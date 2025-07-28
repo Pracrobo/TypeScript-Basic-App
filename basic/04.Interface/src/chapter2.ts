@@ -40,7 +40,7 @@ interface Lib {
   a: number;
   b: number;
 }
-// 모듈 보강
+// 모듈 보강 Module Augmentation
 // 라이브러리는 보통 node_modules 에 정의되서 거기서 불러와서 해야하므로 조금 단계가 있다.
 interface Lib {
   c: string;
