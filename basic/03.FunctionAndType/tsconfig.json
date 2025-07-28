@@ -9,5 +9,5 @@
   "ts-node": {
     "esm": true
   },
-  "include": ["src"]
+  "include": ["src", "../04.Interface/src/index.ts"]
 }
