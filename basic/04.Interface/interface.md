@@ -15,3 +15,11 @@ interface A {
   b: number;
 }
 ```
+
+## vs Type Alias
+
+- interface : extends, declaration merging
+
+## method overloading
+
+- 호출 시그니처 타입 정의 방식을 사용해야 한다.
