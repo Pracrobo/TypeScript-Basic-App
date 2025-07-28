@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "outDir": "dist",
+    "strict": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+    "allowJs": true
+    // "noImplicitAny": false //암시적 Any 허용하지 않을 것이다 false  = 암시적 Any 추론 (안전하지 않음)
+  },
+  "ts-node": {
+    "esm": true
+  },
+  "include": ["src"]
+}
