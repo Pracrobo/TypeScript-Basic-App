@@ -4,7 +4,7 @@
 | ------------------- | ---- | ------------------- |
 | Intro               |   theory, typescript/section1   | 25/07/08            |
 | Basic               |     basic/01.type  | 25/07/08 ~ 25/07/17 |
-| Operating principle      basic/02.Principle       |      | 25/07/17            |
+| Operating principle     |    basic/02.Principle       |   25/07/17            |
 | Type Hierarchy(타입 계층도)         |  basic/02.Principle      | 25/07/17            |
 | Algebraic type(대수 타입)      |  basic/02.Principle     | 25/07/17            |
 | 타입 추론           |  basic/02.Principle   | 25/07/17            |
