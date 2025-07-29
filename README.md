@@ -14,7 +14,7 @@
 | Function and Type (함수와 타입)                                                   | basic/03.FunctionAndType    | 25/07/20 ~ 25/07/28 |
 | Interface(인터페이스)                                                             | basic/04.Interface          | 25/07/28            |
 | Class (클래스)                                                                    | basic/05.Class              | 25/07/28            |
-| Generics (제네릭)                                                                 |                             |                     |
+| Generics (제네릭)                                                                 | basic/06.Generic            | 25/07/29            |
 | 타입 조작하기                                                                     |                             |                     |
 | 조건부 타입                                                                       |                             |                     |
 | 유틸리티 타입                                                                     |                             |                     |

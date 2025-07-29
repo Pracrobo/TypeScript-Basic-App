@@ -1,5 +1,7 @@
 `lib.es5.d.ts`
 
+## Array 정의
+
 ````ts
 /////////////////////////////
 /// ECMAScript Array API (specially handled by compiler)
