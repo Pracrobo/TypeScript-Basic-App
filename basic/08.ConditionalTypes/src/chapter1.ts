@@ -1,6 +1,9 @@
 /**
  * 분산적인 조건부 타입
  * distributive conditional typs
+ *  T extends X
+ *  [T] extends [X]
+ *   * T 에 union type을 넣으면 분산적인 동작이 일어나지 않는다.
  */
 
 // type StringNumberSwitch<T> = T extends number ? string : number;
@@ -31,7 +34,7 @@ let d: StringNumberSwitch<boolean | number | string>;
 
 /**
  * 실용적 예제
- *
+ * T extends U : T가 U의 subType인지
  */
 
 type Exclude<T, U> = T extends U ? never : T;
