@@ -1,0 +1,13 @@
+{
+  // Cannot write file 'c:/Users/user/project/typescript-app/react-with-ts/src/App.js' because it would overwrite input file >> js > jsx
+  // Cannot write file 'c:/Users/user/project/typescript-app/react-with-ts/src/index.js' because it would overwrite input file >> js > jsx
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "commonjs",
+    "strict": true,
+    "allowJs": true,
+    "esModuleInterop": true, // default 없이도 허용
+    "jsx": "react-jsx"
+  },
+  "include": ["src"]
+}
