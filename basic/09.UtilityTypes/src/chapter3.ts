@@ -34,6 +34,7 @@ type B = Extract<string | boolean, boolean>; // type B = boolean
 /**
  * ReturnType<T>
  * 함수의 반환값 타입을 추출하는 타입
+ * 특정 키와 값 타입의 유연한 객체 타입(사전형태) 정의에 적합한 유틸리티 타입
  */
 // 직접 구현
 // 함수타입만 , any가 반환값인, args : any -> subtype만 갖게 됨
