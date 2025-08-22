@@ -16,9 +16,9 @@
 | Class (클래스)                                                                    | basic/05.Class              | 25/07/28            |
 | Generics (제네릭)                                                                 | basic/06.Generic            | 25/07/29            |
 | Type Manipulation (타입 조작하기)                                                 | basic/07.TypeManipulation   | 25/07/29 ~ 25/07/30 |
-| 조건부 타입                                                                       |                             |                     |
-| 유틸리티 타입                                                                     |                             |                     |
-| 리액트&타입스크립트                                                               |                             |                     |
+| 조건부 타입                                                                       | basic/08.ConditionalTypes   | 25/07/31            |
+| 유틸리티 타입                                                                     | basic/09.UtilityTypes       | 25/07/31            |
+| 리액트&타입스크립트                                                               | react-with-ts               | 25/08/01 ~ 25/08/22 |
 
 ### [Reference]
 
