@@ -1,4 +1,10 @@
-import { useRef, useEffect, useReducer } from "react";
+import React, {
+  useState,
+  useContext,
+  useRef,
+  useEffect,
+  useReducer,
+} from "react";
 import "./App.css";
 import Editor from "./components/Editor";
 import { Todo } from "./types/types";
@@ -6,16 +12,17 @@ import TodoItem from "./components/TodoItem";
 
 type Action =
   | {
-      type: "CRAETE";
+      type: "CREATE";
       data: {
         id: number;
         content: string;
       };
     }
   | { type: "DELETE"; id: number };
+
 function reducer(state: Todo[], action: Action) {
   switch (action.type) {
-    case "CRAETE": {
+    case "CREATE": {
       return [...state, action.data];
     }
     case "DELETE": {
@@ -23,6 +30,27 @@ function reducer(state: Todo[], action: Action) {
     }
   }
 }
+
+export const TodoStateContext = React.createContext<Todo[] | null>(null); // React.Context<null> 로 추론, 그러니 <> 로 감싸준다.
+// React.Context<Todo[] | null>
+//  function createContext<T>(
+// If you thought this should be optional, see
+// https://github.com/DefinitelyTyped/DefinitelyTyped/pull/24509#issuecomment-382213106
+// defaultValue: T,
+// ): Context<T>;
+
+export const TodoDispatchContext = React.createContext<{
+  onClickAdd: (text: string) => void;
+  onClickDelete: (id: number) => void;
+} | null>(null);
+
+// Editor 컴포넌트의 dispatch 커스텀 훅 null에 옵셔널 체이닝 해주기를 하지 말고 이렇게 커스텀 훅으로 정의
+export function useTodoDispatch() {
+  const dispatch = useContext(TodoDispatchContext);
+  if (!dispatch) throw new Error("TodoDispatchContext에 문제가 있다.");
+  return dispatch;
+}
+
 function App() {
   // const [todos, setTodos] = useState<Todo[]>([]);
   const [todos, dispatch] = useReducer(reducer, []);
@@ -69,16 +97,21 @@ function App() {
   return (
     <div className="App">
       <h1>Todo</h1>
-      <Editor onClickAdd={onClickAdd}></Editor>
-      {/* <div>child</div> */}
-      {/* Type '{ onClickAdd: (text: string) => void; }' is not assignable to type 'IntrinsicAttributes'.
-      Property 'onClickAdd' does not exist on type 'IntrinsicAttributes'. */}
-      <div>
-        {todos.map((todo) => (
-          <TodoItem key={todo.id} {...todo} onClickDelete={onClickDelete} />
-          // <div key={todo.id}>{todo.content}</div>
-        ))}
-      </div>
+      <TodoStateContext.Provider value={todos}>
+        <TodoDispatchContext.Provider value={{ onClickAdd, onClickDelete }}>
+          {/* <Editor onClickAdd={onClickAdd}></Editor> */}
+          {/* <div>child</div> */}
+          {/* Type '{ onClickAdd: (text: string) => void; }' is not assignable to type 'IntrinsicAttributes'.
+            Property 'onClickAdd' does not exist on type 'IntrinsicAttributes'. */}
+          <Editor></Editor>
+          <div>
+            {todos.map((todo) => (
+              <TodoItem key={todo.id} {...todo} /> //onClickDelete={onClickDelete} />
+              // <div key={todo.id}>{todo.content}</div>
+            ))}
+          </div>
+        </TodoDispatchContext.Provider>
+      </TodoStateContext.Provider>
     </div>
   );
 }
