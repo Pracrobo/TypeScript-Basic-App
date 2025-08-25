@@ -2,14 +2,14 @@
 // 여러가지 값들에 각각 이름을 부여해 열거해두고 사용하는 타입
 var Role;
 (function (Role) {
-    Role[Role["ADMIN"] = 0] = "ADMIN";
-    Role[Role["USER"] = 1] = "USER";
-    Role[Role["GUEST"] = 2] = "GUEST";
+  Role[(Role["ADMIN"] = 0)] = "ADMIN";
+  Role[(Role["USER"] = 1)] = "USER";
+  Role[(Role["GUEST"] = 2)] = "GUEST";
 })(Role || (Role = {}));
 var Language;
 (function (Language) {
-    Language["korean"] = "ko";
-    Language["english"] = "en";
+  Language["korean"] = "ko";
+  Language["english"] = "en";
 })(Language || (Language = {}));
 // enum은 컴파일시 안사라진다.
 const user1 = { name: "Pracrobo", role: Role.ADMIN, language: Language.korean }; // 관리자

@@ -22,5 +22,5 @@ let nude1 = undefined;
 // 리터럴 타입(값 타입)
 let numA = 10;
 export {};
-//numA = 12; // 값으로만 타입을 정의했기때문에 이건 정의 될 수 없음
+//numA = 12; // 값으로만 타입을 정의했기 때문에 이건 정의 될 수 없음
 // number, string, boolean 세가지 다 리터럴 타입에 쓸 수 있다.

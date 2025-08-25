@@ -78,7 +78,7 @@ var func = function () {
 }
 ```
 
-> 파일 별로 똑같이 작성했을때 ,Cannot redeclare block-scoped variable 'a' 에러 발생
+> 파일 별로 똑같이 작성했을때, Cannot redeclare block-scoped variable 'a' 에러 발생
 > -> 모든 파일을 전역모듈로 본다.
 
 - 글로벌 모듈
